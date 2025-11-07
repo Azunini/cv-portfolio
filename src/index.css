@@ -1,0 +1,80 @@
+/* 🔹 Importaciones SIEMPRE al inicio */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* 🔹 Variables personalizadas */
+@theme {
+  --color-first: #00010D;
+  --color-second: #00337C;
+  --color-third: #011640;
+  --color-fourth: #010D26;
+  --color-fifth: #010D26;
+  --color-sixth: #5FCDD9;
+  --color-pgray: #A8A9B4;
+}
+
+/* 🔹 RESET (va dentro de @layer base) */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+  }
+
+  html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Evita que las secciones queden tapadas al scrollear hacia ellas */
+  section {
+    scroll-margin-left: 255px;
+    /* Ajusta al ancho de tu sidebar */
+  }
+}
+
+/* 🔹 COMPONENTES personalizados */
+@layer components {
+  .menu-item {
+    @apply relative text-pgray font-[700] cursor-pointer transition-colors duration-200 ease-linear select-none;
+
+    &::before {
+      content: '';
+      @apply absolute left-0 bottom-0 h-0.5 bg-rose-700 w-0 transition-all duration-500 ease-out;
+    }
+
+    &:hover::before {
+      @apply w-[20%];
+    }
+
+    &.active::before {
+      @apply w-[20%];
+    }
+
+    &:hover {
+      @apply text-cyan-50;
+    }
+  }
+}

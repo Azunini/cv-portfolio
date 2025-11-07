@@ -1,0 +1,45 @@
+{
+  "home": {
+    "welcome": "BIENVENIDO A MI PORTFOLIO",
+    "hello": "Hola, soy Alex",
+    "role": "Desarrollador Web",
+    "description": "Diseño y desarrollo experiencias digitales que se sienten naturales, utilizando diseño y código para crear webs útiles e intuitivas para el usuario.",
+    "button": "DESCARGAR CV"
+  },
+    "project": {
+    "title": "Conoce",
+    "sub-title": "Mis Proyectos",
+    "btn-demo": "Demo",
+    "btn-code": "Codigo",
+     "prj1-title": "Agenda App",
+    "prj1-desc": "App de agendas creada en React utilizando Firebase y desplegada en Vercel"
+  },
+  "header": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "role": "Desarrollador Frontend",
+    "text1": "Me llamo Alexander Zunini, tengo 25 años y soy de Montevideo, Uruguay.",
+    "text2": "Culminé el bachillerato en informática y decidí continuar de forma autodidacta, especializándome en desarrollo web.",
+    "text3": "Me encanta el Front End, donde disfruto combinar la lógica con el diseño para crear experiencias web atractivas, funcionales y bien estructuradas.",
+    "card1" : "Nacimiento",
+    "card2" : "Pais",
+    "card3" : "Correo",
+    "card4" : "Celular"
+    },
+  "contact": {
+    "title": "Contactame",
+    "desc": "Si querés hablar sobre proyectos, colaboraciones o simplemente conectar, completá el formulario y te responderé lo antes posible.",
+    "button": "Enviar mensaje",
+    "inp-name": "Tu nombre",
+    "inp-email": "ejemplo@ejemplo.com",
+    "inp-desc": "Escribe tu mensaje..."
+  },
+  "footer": {
+    "powered": "Orgullosamente desarrollado por"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "home": {
+    "welcome": "WELCOME TO MY PORTFOLIO",
+    "hello": "Hi, I'm Alex",
+    "role": "Web Developer",
+    "description": "I design and develop digital experiences that feel natural, using design and code to create useful and intuitive websites for users.",
+    "button": "DOWNLOAD CV"
+  },
+  "project": {
+    "title": "Get To Know",
+    "sub-title": "My Projects",
+    "btn-demo": "Preview",
+    "btn-code": "Code",
+    "prj1-title": "Planner App",
+    "prj1-desc": "Planner App built with React, using Firebase and deployed on Vercel"
+    
+  },
+  "header": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "role": "Frontend Developer",
+    "text1": "My name is Alexander Zunini, I am 25 years old and I’m from Montevideo, Uruguay.",
+    "text2": "I completed my computer science studies and decided to continue self-taught, specializing in web development.",
+    "text3": "I especially love Front End, where I enjoy combining logic with design to create attractive, functional, and well-structured web experiences.",
+    "card1" : "Birthdate",
+    "card2" : "Country",
+    "card3" : "Email",
+    "card4" : "Phone"
+    },
+  "contact": {
+    "title": "Contact Me",
+    "desc": "If you want to talk about projects, collaborations, or just connect, fill out the form and I’ll reply as soon as possible.",
+    "button": "Send Message",
+    "inp-name": "Your name",
+    "inp-email": "example@example.com",
+    "inp-desc": "Write Your Message..."
+  },
+  "footer": {
+    "powered": "Proudly powered by"
+  }
+}
