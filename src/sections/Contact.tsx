@@ -11,27 +11,30 @@ const Contact: React.FC = () => {
   
   // funcion para enviar el email, En este caso el evento es de tipo submit, o sea, un evento de formulario.
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // si el form esta vacio, retorna
-    if (!form.current) return;
-    emailjs
-      .sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  e.preventDefault();
+
+  const formEl = form.current;
+  if (!formEl) return; // si es null, salimos antes
+
+  emailjs
+    .sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID!,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
+      formEl,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY!
     )
-      .then(
-        () => {
-          alert("✅ Mensaje enviado con éxito.");
-          form.current.reset();
-        },
-        (error) => {
-          console.error("Error al enviar:", error);
-          alert("❌ Hubo un error al enviar el mensaje.");
-        }
-      );
-  };
+    .then(
+      () => {
+        alert("✅ Mensaje enviado con éxito.");
+        formEl.reset();
+      },
+      (error) => {
+        console.error("Error al enviar:", error);
+        alert("❌ Hubo un error al enviar el mensaje.");
+      }
+    );
+};
+
 
   return (
     <section
