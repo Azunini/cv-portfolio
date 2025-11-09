@@ -75,5 +75,3 @@ const About: React.FC = () => {
 
 export default About;
 
-
-// TERMINAR PARTE MOBILE DEL ABOUT, CONCTACT ME
