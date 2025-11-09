@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCardSkeleton from "./projectCardSkeleton";
+import ProjectCardSkeleton from "./ProjectCardSkeleton";
 
 const ProjectsSkeleton: React.FC = () => {
   return (
