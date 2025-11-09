@@ -17,7 +17,7 @@ const Projects = () => {
     {/* cards render */}
       <div
         id="Projects"
-        className="flex flex-col md:flex-row md:flex-wrap md:items-start items-center gap-16 justify-center w-full h-auto mt-20"
+        className="flex flex-col md:flex-row md:flex-wrap md:items-start items-center gap-16 justify-center w-full h-auto mt-20 mb-20 md:mb-0"
       >
         {projects.map((p) => (
           <ProjectCard key={p.id} {...p} />
