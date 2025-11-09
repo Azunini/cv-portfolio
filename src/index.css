@@ -1,19 +1,6 @@
-/* 🔹 Importaciones SIEMPRE al inicio */
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&display=swap');
+
 @import "tailwindcss";
 
-/* 🔹 Variables personalizadas */
-@theme {
-  --color-first: #00010D;
-  --color-second: #00337C;
-  --color-third: #011640;
-  --color-fourth: #010D26;
-  --color-fifth: #010D26;
-  --color-sixth: #5FCDD9;
-  --color-pgray: #A8A9B4;
-}
 
 /* 🔹 RESET (va dentro de @layer base) */
 @layer base {
@@ -58,7 +45,7 @@
 /* 🔹 COMPONENTES personalizados */
 @layer components {
   .menu-item {
-    @apply relative text-pgray font-[700] cursor-pointer transition-colors duration-200 ease-linear select-none;
+    @apply relative text-gray-500 font-[700] cursor-pointer transition-colors duration-200 ease-linear select-none;
 
     &::before {
       content: '';

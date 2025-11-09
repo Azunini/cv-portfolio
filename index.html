@@ -2,19 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <!-- pre cargo la imagen -->
-    <link rel="preload" as="image" href="/src/assets/images/HeroImg.webp" />
-    <!-- Iconos -->
+
+    <!-- 🔹 Preconexiones (mejoran tiempos de carga de fuentes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- 🔹 Fuentes principales -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+
+    <!-- 🔹 Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+
+    <!-- 🔹 Precarga de imagen crítica -->
+    <link rel="preload" as="image" href="/src/assets/images/HeroImg.webp">
+
+    <!-- 🔹 Metadatos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- 🔹 Script principal (Vite) -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

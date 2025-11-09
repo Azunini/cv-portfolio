@@ -34,7 +34,7 @@ export default function Header() {
           {/* Branding */}
           <div className="text-center w-full flex flex-col justify-center items-center mt-8 mb-5">
             <div className="bg-second shadow-lg h-30 w-30 flex justify-center items-center rounded-full cursor-pointer overflow-hidden mb-5">
-              <img src={profile} alt="profile" className="pt-17 scale-135" />
+              <img src={profile} alt="profile" className="pt-17 scale-135" loading="lazy" width="300" height="400" />
             </div>
             <p className="text-amber-50 font-bold text-[1.2rem]">
               Alexander Zunini
@@ -54,7 +54,7 @@ export default function Header() {
 
           {/* Menú */}
           <nav className="flex flex-col w-full px-[15px] pt-2">
-            <ul className="style-none text-pgray text-[1.2rem] font-bold flex flex-col gap-12">
+            <ul className="style-none text-gray-400 text-[1.2rem] font-bold flex flex-col gap-12">
               {["home", "projects", "about", "contact"].map((item) => (
                 <li
                   key={item}
