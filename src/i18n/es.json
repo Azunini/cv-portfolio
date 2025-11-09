@@ -2,12 +2,12 @@
   "home": {
     "welcome": "BIENVENIDO A MI PORTFOLIO",
     "hello": "Hola, soy Alex",
-    "role": "Desarrollador Web",
+    "role": "Web Developer",
     "description": "Diseño y desarrollo experiencias digitales que se sienten naturales, utilizando diseño y código para crear webs útiles e intuitivas para el usuario.",
     "button": "DESCARGAR CV"
   },
     "project": {
-    "title": "Conoce",
+    "title": "CONOCE",
     "sub-title": "Mis Proyectos",
     "btn-demo": "Demo",
     "btn-code": "Codigo",
