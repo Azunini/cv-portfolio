@@ -39,12 +39,12 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200 px-6 py-20"
+      className="relative w-full min-h-screen flex flex-col justify-center items-center bg-linear-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200 px-6 py-20"
     >
       {/* Contenedor principal */}
       <div className="max-w-3xl w-full flex flex-col items-center text-center gap-8">
         {/* Título */}
-        <h2 className="text-4xl md:text-5xl font-bold text-rose-500 tracking-wide">
+        <h2 className="text-4xl md:text-5xl font-poppins regular font-bold text-rose-500 tracking-wide">
             {t("contact.title")}
         </h2>
 
@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
 
           <button
             type="submit"
-            className="active:bg-rose-800 mt-3 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105"
+            className="active:bg-rose-800 mt-3 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-poppins font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105"
           >
                       {t("contact.button")}
           </button>

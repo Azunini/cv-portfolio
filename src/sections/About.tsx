@@ -11,12 +11,12 @@ const About: React.FC = () => {
       className="relative bg-fuchsia-50 w-full min-h-screen flex flex-col items-center text-neutral-900 text-center md:pt-15"
     >
       <div className="relative w-full md:w-[80%] min-h-screen py-10 md:pt-30 flex flex-col items-center">
-        <h2 className="text-neutral-900 text-5xl font-bold md:mb-4 font-[Epilogue] text-center md:text-left w-full">
+        <h2 className="text-neutral-900 text-5xl md:mb-4 font-epilogue font-bold regular text-center md:text-left w-full">
                 {t("about.title")}
         </h2>
         <div className="flex flex-col md:flex-row  w-full justify-between">
           {/* Text cont*/}
-          <div className="font-[Poppins] text-center md:text-left tracking-wide w-full md:w-[60%] text-gray-700 leading-relaxed md:p-0 p-5 ">
+          <div className="font-poppins text-center md:text-left tracking-wide w-full md:w-[60%] text-gray-700 leading-relaxed md:p-0 p-5 ">
             <div className="w-full md:w-[90%] flex flex-col gap-5">
               <h3 className="text-neutral-900 tracking-wide text-center md:text-left font-[Epilogue] font-bold text-2xl w-full md:pt-5">
                 {t("about.role")}
@@ -42,7 +42,7 @@ const About: React.FC = () => {
           </div>
         </div>
         {/* cards info */}
-        <div className="font-[Poppins] text-neutral-700 w-full md:h-50 md:-mt-18 flex flex-col justify-center items-center md:pt-0 pt-10 md:flex-row gap-20">
+        <div className="font-poppins text-neutral-700 w-full md:h-50 md:-mt-18 flex flex-col justify-center items-center md:pt-0 pt-10 md:flex-row gap-20">
           <div className="flex flex-col gap-2 justify-center items-center w-[250px] h-[90px] p-5 rounded-2xl border-[1.5px] border-neutral-300 shadow-sm">
             <p className="text-left w-full h-full">
               <span className="block font-semibold">{t("about.card1")}</span>

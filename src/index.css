@@ -1,6 +1,59 @@
+/* ========================
+   Poppins
+   ======================== */
+@font-face {
+  font-family: 'Poppins';
+  src: url('./Fonts/Poppins/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./Fonts/Poppins/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+/* ========================
+   Jost
+   ======================== */
+@font-face {
+  font-family: 'Jost';
+  src: url('./Fonts/Jost/Jost-VariableFont_wght.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================
+   Epilogue
+   ======================== */
+@font-face {
+  font-family: 'Epilogue';
+  src: url('./Fonts/Epilogue/Epilogue-VariableFont_wght.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 @import "tailwindcss";
 
+/* Clases personalizadas (ya que no tenés tailwind.config.js) */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-jost {
+  font-family: 'Jost', sans-serif;
+}
+
+.font-epilogue {
+  font-family: 'Epilogue', sans-serif;
+}
 
 /* 🔹 RESET (va dentro de @layer base) */
 @layer base {
@@ -32,6 +85,7 @@
   }
 
   body {
+    @apply font-[Poppins] text-white bg-gray-950;
     overflow-x: hidden;
   }
 

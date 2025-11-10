@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div className="relative w-full min-h-screen flex flex-col pt-30 bg-transparent bg-linear-to-tl from-rose-900 via-rose-950 to-pink-950">
       {/* title */}
-      <h2 className="text-1xl font-bold mb-8 font-[Poppins] text-cyan-50 w-full text-center tracking-wide">
+      <h2 className="text-1xl font-bold mb-8 font-poppins text-cyan-50 w-full text-center tracking-wide">
         {t("project.title")}
         <span className="text-4xl block font-normal">{t("project.sub-title")}</span>
       </h2>

@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../assets/images/yo.webp";
+import profile from "../../assets/images/Yo-header.webp";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
           {/* Branding */}
           <div className="text-center w-full flex flex-col justify-center items-center mt-8 mb-5">
             <div className="bg-second shadow-lg h-30 w-30 flex justify-center items-center rounded-full cursor-pointer overflow-hidden mb-5">
-              <img src={profile} alt="profile" className="pt-17 scale-135" loading="lazy" width="300" height="400" />
+              <img src={profile} alt="profile" className="scale-100" loading="lazy" width="300" height="400" />
             </div>
             <p className="text-amber-50 font-bold text-[1.2rem]">
               Alexander Zunini
