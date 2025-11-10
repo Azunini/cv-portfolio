@@ -1,5 +1,5 @@
 /* ========================
-   Poppins
+   FONTS
    ======================== */
 @font-face {
   font-family: 'Poppins';
@@ -15,102 +15,61 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-
 }
 
-/* ========================
-   Jost
-   ======================== */
 @font-face {
   font-family: 'Jost';
   src: url('./Fonts/Jost/Jost-VariableFont_wght.woff2') format('woff2');
-  font-weight: 400 700;
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* ========================
-   Epilogue
-   ======================== */
 @font-face {
   font-family: 'Epilogue';
   src: url('./Fonts/Epilogue/Epilogue-VariableFont_wght.woff2') format('woff2');
-  font-weight: 400 700;
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @import "tailwindcss";
 
-/* Clases personalizadas (ya que no tenés tailwind.config.js) */
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
-}
+/* Clases personalizadas */
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-jost { font-family: 'Jost', sans-serif; }
+.font-epilogue { font-family: 'Epilogue', sans-serif; }
 
-.font-jost {
-  font-family: 'Jost', sans-serif;
-}
-
-.font-epilogue {
-  font-family: 'Epilogue', sans-serif;
-}
-
-/* 🔹 RESET (va dentro de @layer base) */
+/* RESET */
 @layer base {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: normal;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html {
-    box-sizing: border-box;
     font-size: 16px;
-    font-family: sans-serif;
-    height: 100%;
-    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
   }
 
-  *,
-  *::after,
-  *::before {
-    box-sizing: inherit;
-  }
-
   body {
-    @apply font-[Poppins] text-white bg-gray-950;
-    overflow-x: hidden;
+    @apply text-white bg-gray-950 overflow-x-hidden;
   }
 
-  /* Evita que las secciones queden tapadas al scrollear hacia ellas */
   section {
     scroll-margin-left: 255px;
-    /* Ajusta al ancho de tu sidebar */
   }
 }
 
-/* 🔹 COMPONENTES personalizados */
+/* COMPONENTES */
 @layer components {
   .menu-item {
-    @apply relative text-gray-500 font-[700] cursor-pointer transition-colors duration-200 ease-linear select-none;
+    @apply relative text-gray-500 font-bold cursor-pointer transition-colors duration-200 ease-linear select-none;
 
     &::before {
       content: '';
       @apply absolute left-0 bottom-0 h-0.5 bg-rose-700 w-0 transition-all duration-500 ease-out;
     }
 
-    &:hover::before {
-      @apply w-[20%];
-    }
-
-    &.active::before {
+    &:hover::before, &.active::before {
       @apply w-[20%];
     }
 
@@ -118,4 +77,13 @@
       @apply text-cyan-50;
     }
   }
+  /* HERO IMAGE */
+  .hero-bg {
+  background-image: url('/images/HeroImg.webp');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: #0f0f1a;
+}
+
 }

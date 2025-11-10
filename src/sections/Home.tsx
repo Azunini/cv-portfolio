@@ -2,18 +2,15 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import cvFile from "../assets/docs/cv.pdf";
 
-const Home: React.FC = () => {
+const Home: React.FC = React.memo(() => {
   // hook translate
   const { t } = useTranslation();
   return (
     <div
       id="home"
-       className="
-        bg-[url('/images/HeroImg.webp')]
-        bg-no-repeat bg-cover bg-top
+      className=" hero-bg
         relative flex flex-col h-screen w-screen text-white md:flex-row
-        bg-[#0f0f1a] 
-      "
+        bg-[#0f0f1a]"
     >
       <div
         id="info"
@@ -43,6 +40,6 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Home;

@@ -19,7 +19,8 @@ export default function Header() {
     <>
       {/* Botón toggle visible SOLO en mobile */}
       <button
-        className="md:hidden fixed top-4 right-4 z-50 text-white bg-rose-900 p-3 rounded-full focus:outline-none h-14 w-14 flex justify-center items-center text-2xl"
+        className="md:hidden fixed top-4 right-4 z-50 text-white bg-rose-900 p-3 rounded-full focus:outline-none h-14 w-14 
+        flex justify-center items-center text-2xl"
         onClick={toggleMenu}
       >
         {isOpen ? "✕" : "☰"}
@@ -27,7 +28,8 @@ export default function Header() {
 
       {/* Menú lateral */}
       <header
-        className={`flex flex-col fixed top-0 left-0 h-full w-[255px] z-40 bg-gray-900 shadow-sm px-5 py-0 transform transition-transform duration-300 font-[Jost]
+        className={`flex flex-col fixed top-0 left-0 h-full w-[255px] z-40 bg-gray-900 shadow-sm px-5 py-0 transform 
+          transition-transform duration-300 font-jost font-normal regular
           ${isOpen ? "translate-x-0 flex" : "-translate-x-full"}
           md:translate-x-0 md:flex`}
       >
@@ -40,7 +42,7 @@ export default function Header() {
             <p className="text-amber-50 font-bold text-[1.2rem]">
               Alexander Zunini
             </p>
-            <p className="text-amber-50 text-sm">Frontend Developer</p>
+            <p className="text-amber-50 text-normal">Frontend Developer</p>
 
             {/* Social icons */}
             <div className="flex gap-5 text-amber-50 mt-5">
@@ -55,7 +57,7 @@ export default function Header() {
 
           {/* Menú */}
           <nav className="flex flex-col w-full px-[15px] pt-2">
-            <ul className="style-none text-gray-400 text-[1.2rem] font-bold flex flex-col gap-12">
+            <ul className="style-none text-gray-400 text-[1.2rem] font-jost  flex flex-col gap-12">
               {["home", "projects", "about", "contact"].map((item) => (
                 <li
                   key={item}
@@ -66,7 +68,7 @@ export default function Header() {
                   }}
                 >
                   {/* Renderizo los items */}
-                  <a href={`#${item}`} className="block w-full h-full">
+                  <a href={`#${item}`} className="block w-full h-full font-normal">
                      {t(`header.${item}`)} {/* Traducción */}
                   </a>
                 </li>
