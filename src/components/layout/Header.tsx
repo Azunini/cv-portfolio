@@ -14,6 +14,7 @@ export default function Header() {
     const newLang = i18n.language === "es" ? "en" : "es";
     i18n.changeLanguage(newLang);
   };
+  
   return (
     <>
       {/* Botón toggle visible SOLO en mobile */}

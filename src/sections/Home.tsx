@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import HeroImage from "../assets/images/HeroImg.webp";
 import cvFile from "../assets/docs/cv.pdf";
 
 const Home: React.FC = () => {
@@ -9,11 +8,12 @@ const Home: React.FC = () => {
   return (
     <div
       id="home"
-      style={{
-        backgroundImage: `url(${HeroImage})`,
-        backgroundRepeat: "no-repeat",
-      }}
-      className="bg-cover bg-top relative flex flex-col h-screen w-screen text-white md:flex-row"
+       className="
+        bg-[url('/images/HeroImg.webp')]
+        bg-no-repeat bg-cover bg-top
+        relative flex flex-col h-screen w-screen text-white md:flex-row
+        bg-[#0f0f1a] 
+      "
     >
       <div
         id="info"
