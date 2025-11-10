@@ -9,12 +9,12 @@ const Home: React.FC = React.memo(() => {
     <div
       id="home"
       className=" hero-bg
-        relative flex flex-col h-screen w-screen text-white md:flex-row
+        relative flex flex-col h-screen w-screen text-white lg:flex-row
         bg-[#0f0f1a]"
     >
       <div
         id="info"
-        className="flex justify-center items-center h-screen w-screen md:w-[55%]"
+        className="flex justify-center items-center h-screen w-screen lg:w-[55%]"
       >
         <div className="w-[80%]">
           <h5 className="font-epilogue regular text-rose-700 font-medium tracking-normal text-1xl mb-4">
@@ -26,7 +26,7 @@ const Home: React.FC = React.memo(() => {
               {t("home.role")}
             </span>
           </h1>
-          <p className="text-lg tracking-wide w-full text-gray-400 font-poppins md:w-[65%]">
+          <p className="text-lg tracking-wide w-full text-gray-400 font-poppins lg:w-[65%]">
             {t("home.description")}
           </p>
           <a

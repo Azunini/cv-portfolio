@@ -4,17 +4,37 @@ import Home from './sections/Home';
 import About from './sections/About';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
-// Así no bloquean el renderizado inicial lo cargo local
+
+// Icon fonts (se cargan localmente desde node_modules/imports)
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-// Le digo que app es del tipo function componetn (FC)
+/**
+ * App principal: las secciones están montadas permanentemente (no routing).
+ * Esto evita desmontar/montar Home -> mejora UX y evita re-render visible.
+ */
 const App: React.FC = () => {
   return (
     <Layout>
-      <section id="home" className='min-h-screen w-full'><Home /></section>
-      <section id="projects" className='w-full'> <Projects /></section>
-      <section id="about" className='min-h-screen w-full'> <About /></section>
-      <section id="contact" className='min-h-scree w-full'><Contact /></section>   
+      {/* Preload visual: imagen cargada en background y en DOM (hidden) para asegurar cache */}
+      <div aria-hidden className="hidden">
+        <img src="/images/HeroImg.webp" alt="preload" loading="eager" />
+      </div>
+
+      <section id="home" className="min-h-screen w-full">
+        <Home />
+      </section>
+
+      <section id="projects" className="w-full">
+        <Projects />
+      </section>
+
+      <section id="about" className="min-h-screen w-full">
+        <About />
+      </section>
+
+      <section id="contact" className="min-h-screen w-full">
+        <Contact />
+      </section>
     </Layout>
   );
 };

@@ -38,29 +38,29 @@ const Contact: React.FC = () => {
 
   return (
     <section
-      id="contact"
+      id="contact"  
       className="relative w-full min-h-screen flex flex-col justify-center items-center bg-linear-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-200 px-6 py-20"
     >
       {/* Contenedor principal */}
       <div className="max-w-3xl w-full flex flex-col items-center text-center gap-8">
         {/* Título */}
-        <h2 className="text-4xl md:text-5xl font-poppins regular font-bold text-rose-500 tracking-wide">
+        <h2 className="text-4xl lg:text-5xl font-poppins regular font-bold text-rose-500 tracking-wide">
             {t("contact.title")}
         </h2>
 
         {/* Descripción */}
-        <p className="text-gray-300 max-w-xl leading-relaxed text-sm md:text-base">
+        <p className="text-gray-300 max-w-xl leading-relaxed text-sm lg:text-base">
                      {t("contact.desc")}
         </p>
 
         {/* Info de contacto */}
-        <div className="bg-gray-800/50 p-6 rounded-xl shadow-md w-full md:w-[80%] border border-gray-700">
+        <div className="bg-gray-800/50 p-6 rounded-xl shadow-lg w-full lg:w-[80%] border border-gray-700">
           <p className="text-gray-400 mb-2">
             <strong className="text-gray-100">
                {t("about.card3")}: </strong>
             <a
               href="mailto:a.zunini@gmail.com"
-              className="hover:text-rose-400 transition-colors"
+              className="hover:text-rose-400 active:text-rose-400 transition-colors"
             >
               a.zunini@gmail.com
             </a>
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
               {t("about.card4")}: </strong>
             <a
               href="tel:+59896629318"
-              className="hover:text-rose-400 transition-colors"
+              className="hover:text-rose-400 active:text-rose-400 transition-colors"
             >
               096 629 318
             </a>
@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
         <form
           ref={form}// indico la referencia
           onSubmit={sendEmail}
-          className="mt-10 flex flex-col gap-5 w-full md:w-[80%]"
+          className="mt-10 flex flex-col gap-5 w-full lg:w-[80%]"
         >
           <input
             type="text"
@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
 
           <button
             type="submit"
-            className="active:bg-rose-800 mt-3 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-poppins font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105"
+            className="active:bg-rose-800 mt-3 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-poppins font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105"
           >
                       {t("contact.button")}
           </button>

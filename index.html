@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Pre cargade fuentes del home -->
+
+    <!-- Preload fuentes críticas (mejora FCP/LCP) -->
     <link
       rel="preload"
       href="./src/Fonts/Poppins/Poppins-Regular.woff2"
@@ -18,21 +19,20 @@
       crossorigin
     />
 
-    <!-- 🔹 Favicon -->
+    <!-- Precarga de la imagen hero (crítica para el Home) -->
+    <link rel="preload" as="image" href="/images/HeroImg.webp" type="image/webp" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Portfolio - Alexander Zunini</title>
+
+    <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-
-    <!-- 🔹 Precarga de imagen crítica -->
-    <link rel="preload" as="image" href="/images/HeroImg.webp" type="image/webp"/>
-
-    <!-- 🔹 Metadatos -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
   </head>
 
   <body>
     <div id="root"></div>
 
-    <!-- 🔹 Script principal (Vite) -->
+    <!-- Vite entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

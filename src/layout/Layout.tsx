@@ -14,10 +14,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Sidebar */}
       <Header />
       {/* Content */}
-      <main className="md:w-[calc(100%-255px)] md:ml-[255px] w-full h-auto flex flex-col justify-center items-center bg-gray-950">
-        <div className="h-auto w-full">
-          {children}
-        </div>
+      <main
+        className="flex flex-col justify-center items-center bg-gray-950 
+        lg:ml-[255px] lg:w-[calc(100%-255px)] w-full min-h-screen transition-all duration-300"
+      >
+        <div id="child-section" className="w-full h-auto">{children}</div>
         <Footer />
       </main>
     </div>
@@ -25,5 +26,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
-
-
