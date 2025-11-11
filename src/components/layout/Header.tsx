@@ -29,15 +29,18 @@ export default function Header() {
       {/* Menú lateral */}
       <header
         id="header"
-        className={`flex flex-col fixed top-0 left-0 h-screen w-[255px] z-40 bg-gray-900 shadow-sm px-5 py-0 transform 
-          transition-transform duration-300 font-jost font-normal regular
+        className={`flex flex-col fixed top-0 left-0 h-full w-[255px] z-40 bg-gray-900 shadow-sm px-5  transform
+          transition-transform duration-300 font-jost font-normal regular justify-between 
           ${isOpen ? "translate-x-0 flex" : "-translate-x-full"}
           lg:translate-x-0 lg:flex`}
       >
-        <div className="flex flex-col justify-items-start items-center h-screen w-full ">
+        <div className="flex flex-col justify-items-start items-center w-full md:pt-30 lg:pt-0 pt-30">
           {/* Branding */}
-          <div id="branding" className="text-center w-full flex flex-col justify-center items-center mt-8 mb-5">
-            <div className="bg-second shadow-lg h-30 w-30 flex justify-center items-center rounded-full cursor-pointer overflow-hidden mb-5">
+          <div
+            id="branding"
+            className="text-center w-full flex flex-col justify-center items-center mt-8 mb-5"
+          >
+            <div className="border-2 border-rose-50 bg-second shadow-lg h-30 w-30 flex justify-center items-center rounded-full cursor-pointer overflow-hidden mb-5">
               <img
                 src={profile}
                 alt="profile"
@@ -72,7 +75,7 @@ export default function Header() {
           </div>
 
           {/* Menú */}
-          <nav className="flex flex-col w-full h-[40%] lg:h-full px-[15px] pt-2 ">
+          <nav className="flex flex-col w-full h-[40%] nesthub-content px-[15px] pt-2">
             <ul className="style-none text-gray-400 lg:text-[1.2rem] font-jost flex flex-col gap-12">
               {["home", "projects", "about", "contact"].map((item) => (
                 <li
@@ -96,14 +99,16 @@ export default function Header() {
           </nav>
         </div>
         {/* Toggle idioma */}
-        <button
-          id="btn-lang"
-          onClick={toggleLanguage}
-          className="flex justify-center items-center gap-2 self-center w-20 h-10 text-center text-white bg-gray-800 px-4 mt-6 mb-5 rounded-sm  hover:bg-rose-700 active:bg-rose-700 hover:cursor-pointer"
-        >
-          <i className="fa-solid fa-globe"></i>
-          {i18n.language === "es" ? "EN" : "ES"}
-        </button>
+        <div className=" w-full h-30 flex flex-row lg:justify-center nesthub-end items-center">
+          <button
+            id="btn-lang"
+            onClick={toggleLanguage}
+            className="flex justify-center items-center mb-2 gap-2 w-28 h-9 text-center text-white bg-gray-800 px-4 rounded-sm  hover:bg-rose-700 active:bg-rose-700 hover:cursor-pointer"
+          >
+            <i className="fa-solid fa-globe"></i>
+            {i18n.language === "es" ? "EN" : "ES"}
+          </button>
+        </div>
       </header>
     </>
   );

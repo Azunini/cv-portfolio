@@ -8,7 +8,7 @@ const Projects = () => {
     // hook translate
     const { t } = useTranslation();
   return (
-    <div className="relative w-full min-h-screen flex flex-col pt-30 bg-transparent bg-linear-to-tl from-rose-900 via-rose-950 to-pink-950">
+    <div className="relative w-full min-h-screen flex flex-col py-20 bg-transparent bg-linear-to-tl from-rose-900 via-rose-950 to-pink-950">
       {/* title */}
       <h2 className="text-1xl font-bold mb-8 font-poppins text-cyan-50 w-full text-center tracking-wide">
         {t("project.title")}

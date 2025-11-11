@@ -4,7 +4,7 @@ export default function Footer() {
   // hook translate
   const { t } = useTranslation();
   return (
-    <div className="nesthub-footer flex flex-col lg:flex-row justify-around items-center bg-gray-900 text-amber-50 min-h-20 w-full py-2 h-auto">
+    <div className="nesthub-footer flex flex-col lg:flex-row justify-around items-center bg-gray-800 text-amber-50 min-h-20 w-full py-2 h-auto">
       {/* ELEMENTO 1 */}
       <div className="nesthub-align flex flex-row justify-center w-full lg:flex-1 gap-5 pt-2">
         <a

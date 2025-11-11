@@ -138,4 +138,19 @@
     justify-content: center;
     align-content: center;
   }
+
+  .nesthub-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+  }
+
+  .nesthub-content {
+    height: 100%;
+  }
+
+  .nesthub-end {
+    justify-content: end;
+  }
 }
