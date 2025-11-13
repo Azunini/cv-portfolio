@@ -1,16 +1,36 @@
-import React from "react";
+import { useEffect, useRef, useState} from "react";
 import { useTranslation } from "react-i18next";
 import cvFile from "../assets/docs/cv.pdf";
-
+import React from "react";
 const Home: React.FC = React.memo(() => {
   // hook translate
   const { t } = useTranslation();
+  // Home reference
+  const homeRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(true); // Siempre visible mientras está montado
+
+  useEffect(() => {
+    // Guardamos una copia del nodo actual
+    const currentHome = homeRef.current;
+    // Usamos IntersectionObserver para evitar que React desmonte o "recalcule" estilos
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    if (currentHome) observer.observe(currentHome);
+
+    return () => {
+      if (currentHome) observer.unobserve(currentHome);
+    };
+  }, []);
+
   return (
     <div
       id="home"
-      className=" hero-bg
-        relative flex flex-col h-screen w-screen text-white lg:flex-row
-        bg-[#0f0f1a]"
+      ref={homeRef}
+     className={`hero-bg relative flex flex-col h-screen w-screen text-white lg:flex-row transition-opacity duration-500 ${
+        isVisible ? "opacity-100" : "opacity-100"
+      }`}
     >
       <div
         id="info"
@@ -43,3 +63,8 @@ const Home: React.FC = React.memo(() => {
 });
 
 export default Home;
+
+/*
+IntersectionObserver es una API nativa de JavaScript (no depende de React) 
+que te permite saber cuándo un elemento del DOM entra o sale del área visible de la ventana (viewport).
+*/
