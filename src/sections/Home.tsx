@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import cvFile from "../assets/docs/CV.pdf";
+import cvFile from "../assets/docs/cv.pdf";
 
 const Home: React.FC = React.memo(() => {
   // hook translate
